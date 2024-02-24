@@ -1,0 +1,37 @@
+<ion-content [fullscreen]="true">
+  
+  <ion-card>
+    
+    <ion-card-content>
+
+      <ion-row justify-content-center>
+
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-button id="General" (click)="toggleTodo()"> {{ todos() ? 'OFF' : 'ON' }}</ion-button>
+        </ion-col>
+
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-button (click)="toggleEstado('LED1')" [ngStyle]="{'--background': led1 ? 'red' : 'green'}">
+            <ion-icon name="power-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-button (click)="toggleEstado('LED2')" [ngStyle]="{'--background': led2 ? 'red' : 'green'}">
+            <ion-icon name="power-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+        <ion-col size="12" size-md="6" size-lg="3">
+          <ion-button (click)="toggleEstado('LED3')" [ngStyle]="{'--background': led3 ? 'red' : 'green'}">
+            <ion-icon name="power-outline"></ion-icon>
+          </ion-button>
+        </ion-col>
+
+      </ion-row>
+
+    </ion-card-content>
+
+  </ion-card>
+
+</ion-content>
